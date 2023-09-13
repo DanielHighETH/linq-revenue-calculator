@@ -85,7 +85,7 @@ function LPTokenCalculator({ ethereumPrice }: { ethereumPrice: string }) {
 
   return (
     <div className="mt-10">
-      <h2 className="text-2xl font-bold font-header">LP Token Calculator</h2>
+      <h1 className='text-4xl font-header'>LP Token Calculator</h1>
 
       <div className="mt-5">
         <label htmlFor="linqLPInput" className="block text-sm font-header2">
@@ -179,7 +179,7 @@ export default function Home() {
 
       <div className="mt-10">
       <div className='mt-10 flex flex-col'>
-  <h1 className='text-2xl uppercase font-bold'>
+  <h1 className='text-4xl font-header'>
     Live LINQ Statistics
   </h1>
 

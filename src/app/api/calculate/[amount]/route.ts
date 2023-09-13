@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import numeral from 'numeral';
 require('dotenv').config()
 
+
 export const revalidate = 0;
 
 export async function GET(request: Request){

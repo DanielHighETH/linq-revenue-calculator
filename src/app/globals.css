@@ -57,3 +57,34 @@ h1{
 h3{
   font-family: 'HeaderFont', sans-serif;
 }
+
+.font-header{
+  font-family: 'HeaderFont', sans-serif;
+}
+
+.font-header2{
+  font-family: 'HeaderFont2', sans-serif;
+}
+
+input {
+  font-family: 'HeaderFont2', sans-serif;
+}
+
+/* For Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Chrome, Safari, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Microsoft Edge */
+input[type="number"]::-ms-clear {
+    display: none;
+}

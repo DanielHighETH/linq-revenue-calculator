@@ -214,7 +214,7 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col w-full bg-zinc-800 p-5 rounded-lg'>
-          <h1 className='text-xl font-bold'>Link Holders</h1>
+          <h1 className='text-xl font-bold'>Linq Holders</h1>
           <p className='text-2xl font-bold'>{statistics.totalNumberOfHolders}</p>
         </div>
       </div>

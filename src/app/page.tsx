@@ -142,7 +142,7 @@ export default function Home() {
   useEffect(() => {
     getData().then(data => {
         setStatistics(data);
-        setEthereumPrice(data.ethereumPriceString);
+        setEthereumPrice(data.ethereumPrice);
     });
 }, []);
 

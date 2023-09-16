@@ -33,19 +33,19 @@ export async function GET() {
       next: { revalidate: 0 }
     })
 
-    const duneRes3 = await fetch(`https://api.dune.com/api/v1/query/2963777/results?api_key=${process.env.DUNE_API_KEY}&time=${Date.now()}`, {
+    /*const duneRes3 = await fetch(`https://api.dune.com/api/v1/query/2963777/results?api_key=${process.env.DUNE_API_KEY}&time=${Date.now()}`, {
       next: { revalidate: 0 }
-    })
+    })*/
 
     const duneRes4 = await fetch(`https://api.dune.com/api/v1/query/2957275/results?api_key=${process.env.DUNE_API_KEY}&time=${Date.now()}`, {
       next: { revalidate: 0 }
     })
 
 
-    const duneData = await duneRes.json()
-    const duneData2 = await duneRes2.json()
-    const duneData3 = await duneRes3.json()
-    const duneData4 = await duneRes4.json()
+    const duneData = await duneRes.json() //ok
+    const duneData2 = await duneRes2.json() //25k
+   // const duneData3 = await duneRes3.json() //100k
+    const duneData4 = await duneRes4.json() //30k
 
     const ethereumPrice = await fetchEthereumPrice();
 
@@ -57,7 +57,8 @@ export async function GET() {
       lifetimeTotalTaxRevenueETH: numeral(duneData.result.rows[0].lifetimeTotalTaxRevenueETH).format('0,0.00'),
       closePriceUSD: numeral(duneData2.result.rows[0].closePriceUSD).format('0,0.00000'), //linq token
       mcapUSD: numeral(duneData2.result.rows[0].mcapUSD).format('0,0'), //linq token mcap
-      totalNumberOfHolders: numeral(duneData3.result.rows[0].totalNumberOfHolders).format('0,0'), //linq holders
+      //totalNumberOfHolders: numeral(duneData3.result.rows[0].totalNumberOfHolders).format('0,0'), //linq holders
+      totalNumberOfHolders: "NaN", 
       totalLiquidityUSD: numeral(duneData2.result.rows[0].totalLiquidityUSD).format('0,0'), //linq token
       ethereumPrice: ethereumPrice,
       ethereumPriceString: numeral(ethereumPrice).format('0,0.00')
